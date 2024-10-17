@@ -8,6 +8,13 @@ public class Library {
 
     public Library() {
         Book defaultBook = new Book("Harry Potter", "Rowling", 411);
+        books.add(defaultBook);
+    }
+
+    public void showAllBooks() {
+        for (Book a : books) {
+            System.out.println(a.getTitle());
+        }
     }
 
 
