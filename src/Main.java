@@ -3,6 +3,6 @@ public class Main {
 
         Library library = new Library();
 
-        library.showAllBooks();
+        library.meny();
     }
 }
