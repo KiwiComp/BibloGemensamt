@@ -16,6 +16,33 @@ public class Library {
             System.out.println(a.getTitle());
         }
     }
+    public void addBook(){
+        System.out.println("Skriv titeln på boken du vill lägga till: ");
+        String bokTitle = scanner.nextLine();
+        System.out.println("Skriv författare");
+        String bokAuthor = scanner.nextLine();
+        System.out.println("Skriv antals sidor: ");
+        int bokPages = scanner.nextInt();
+        Book userBook = new Book(bokTitle, bokAuthor,bokPages);
+        books.add(userBook);
+    }
+public void meny(){
 
+       while(true){
+           String choise = scanner.nextLine();
+           switch(choise){
+               case "1":
+                   showAllBooks();
+                   break;
+               case "2":
+                   addBook();
+                   break;
+               default:
+                   System.out.println("Goodby");
+           }
+
+       }
+
+}
 
 }
